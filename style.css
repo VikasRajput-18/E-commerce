@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* scroll-behavior:smooth; */
+}
+
+body{
+    font-family: 'Baloo 2', cursive;
+}
+::selection{
+    background-color: rgb(33, 240, 222);
+}
+
+/* Header  */
+
+.header{
+    height: 15vh;
+    width: 100%;
+   position :sticky;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+    background-color: aliceblue;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+
+
+    
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    /* background-color: aliceblue; */
+}
+
+.header img{
+    width: 100px;
+    margin-left: 30px;
+}
+
+.nav-items{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-items li{
+    position: relative;
+
+}
+.nav-items a i{
+    display: none;
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: rgb(94, 95, 95);
+    margin-right: 20px;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Baloo 2', cursive;
+    font-weight: 500;
+    position: relative;
+
+}
+.nav-items li a:hover{
+    color: rgb(15, 160, 148);;
+}
+
+.nav-items li:hover,
+.nav-items li a.active{
+    color: rgb(15, 160, 148);
+}
+
+.mobile{
+    display: flex;
+    align-items: center;
+    display: none;
+}
+.mobile i{
+    margin-right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+.nav-items li a.active::after , 
+.nav-items li a:hover::after{
+    content: '';
+    width: 50%;
+    left: 0;
+    bottom: -4px;
+    background-color: rgb(15, 160, 148);
+    position: absolute;
+    height: 3px;
+    border-radius: 7px;
+}
+.nav-items .fa-shopping-bag{
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-right: 10px;
+
+}
+.nav-items i:hover{
+    color: rgb(15, 160, 148);
+}
+
+ 
+
+/* HOME pAGE  */
+
+
+#hero{
+    padding: 20px 100px;
+    width: 100%;
+    height: 85vh;
+    background: url(./images/myPic.png) no-repeat;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    background-position: 80%;
+    background-size: 600px;
+}
+
+#hero h3{
+    font-size: 1.6rem;
+    color: rgb(94, 95, 95);
+}
+
+#hero h1:last-of-type{
+    font-size: 3rem;
+     color: rgb(15, 160, 148);
+}
+#hero h1:first-of-type{
+    font-size: 3rem;
+     /* color: rgb(15, 160, 148); */
+}
+
+#hero p{
+    color: rgb(146, 146, 146);
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+}
+
+#hero button{
+    margin-top: 20px;
+    padding: 8px 25px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    font-weight: 600;
+    color: rgb(15, 160, 148);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+
+#hero button:hover{
+    box-shadow: 10px 10px 0px rgb(146, 146, 146);
+}
+
+ /* features  */
+
+
+ .features{
+     /* margin-top: 30px; */
+     padding: 30px  100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color:rgba(240, 235, 235, 0.685);
+    flex-wrap: wrap;
+ }
+
+ .feature img{
+     width: 100px;
+     height: 100px;
+     border-radius: 10px;
+ }
+
+ .feature{
+     padding: 10px 20px;
+     background-color: white;
+     border-radius: 10px;
+     cursor: pointer;
+     
+ }
+
+.feature:hover{
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    }
+ .feature p{
+     font-size: 1.1rem;
+     color: rgb(15, 160, 148);
+     font-weight: bold;
+     padding:0px 5px;
+     border-radius: 5px;
+
+ }
+
+ .shipping{
+     background-color: rgb(251,219,227);
+ }
+
+ .order{
+  background-color:rgb(204,231,187) ;
+ }
+ 
+.saveMoney{
+background-color:rgb(204,231,187) ;
+} 
+
+.promotion{
+background-color: rgb(205,214,252);
+}
+
+.sell{
+background-color: rgb(242,221,246);
+}
+
+.support{
+background-color: rgb(255,241,230) ;
+}
+
+
+/* Feature Products  */
+
+.products{
+    padding: 30px 80px;
+    text-align: center;
+}
+
+.products h2{
+    font-size: 3.4rem;
+}
+
+.products p{
+    font-size: 1.3rem;
+    color: rgb(146, 146, 146);
+}
+
+.items{
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.items img{
+   width: 250px;
+   height: 250px;
+   padding: 15px;
+   border-radius: 20px;
+}
+
+.items .item{
+    border-radius: 20px;
+    width: 300px;
+    background-color: rgb(252, 245, 245);
+    position: relative;
+    padding-top: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.item:hover{
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.info{
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.info p{
+    font-size: 1rem;
+}
+.info .fa-star{
+    color:rgb(211, 162, 49);
+    margin-right: 2px;
+}
+
+.info .price{
+    color: rgb(15, 160, 148);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.info .fa-shopping-cart{
+    position: absolute;
+    color: rgb(15, 160, 148);
+    background-color: rgba(15, 160, 148, 0.26);
+    border-radius: 50%;
+    padding: 10px;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    transition:  font-size 0.3s ease-in-out ;
+}
+
+.info .fa-shopping-cart:hover{
+  color: white;
+  background-color: rgb(15, 160, 148);;
+}
+
+
+/* banner */
+
+#banner{
+    margin: 20px 0px;
+    background: url(./images/banner.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#banner p{
+    font-size: 1.6rem;
+    color: white;
+    font-weight: bold;
+}
+
+#banner h1{
+    font-size: 2.6rem;
+    color: white;
+}
+
+#banner span{
+    color: red;
+}
+
+#banner button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #333;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#banner button:hover{
+    color: White;
+    background-color: rgb(15, 160, 148);
+}
+
+
+/* Promos    Sales */ 
+
+
+.sm-banner{
+    margin-top: 50px;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+.sm-banner .banner-box{
+    width: 600px;
+    height: 500px;
+    background-image: url(./images/model.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 30px;
+    border-radius: 10px;
+    color: white;
+}
+
+.sm-banner .banner-box p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.sm-banner .banner-box h2{
+    font-size: 2rem;
+}
+
+.sm-banner .banner-box h4{
+    font-size: 1.5rem;
+}
+
+.sm-banner .banner-box button{
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    outline: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.sm-banner .banner-box button:hover{
+    background-color: rgb(15, 160, 148);
+    color: white;
+    border: 0;
+}
+
+.sm-banner .banner-box2{
+        background-image: url(./images/coll.jpg);
+        background-size: cover;
+        object-fit: contain;
+        /* transform: rotate(180deg); */
+        background-position: top;
+}
+
+.sm-banner .banner-box:hover{
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.6);
+}
+
+
+/* banner 3  */
+.banner3{
+    /* margin-top: 30px; */
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.banner3 .banner-box{
+    width: 400px;
+    height: 250px;
+    background-image: url(./images/seasonsale.jpg);
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner3 .banner-box h3{
+   color: red;
+   font-size: 1.7rem;
+}
+.banner3 .banner-box h2{
+   
+   font-size: 1.9rem;
+}
+
+.banner3 .newFootwear{
+    background-image: url(./images/watchesCol.jpg);
+}
+.banner3 .tShirts{
+    background-image: url(./images/shop.jpg);
+}
+
+.banner3 .banner-box:hover{
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.6);
+  
+}
+
+
+/* newsletter  */
+
+.newsletter{
+    padding: 50px 100px;
+    background: url(./images/nb.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: white;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.newsletter .newsLetter-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newsletter .newsLetter-text h2{
+    font-size: 2rem;
+}
+.newsletter .newsLetter-text p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.newsletter .newsLetter-text p span{
+    color: rgb(228, 243, 18);
+}
+
+.newsletter form{
+    display: flex;
+    width: 400px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    /* position: relative; */
+}
+
+.newsletter form input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+}
+
+.newsletter form button{
+    width: 120px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    right: 0;
+    top: 0;
+    outline: 0;
+    padding: 0 15px;
+    border: 0;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: rgb(15, 160, 148);
+    cursor: pointer;
+}
+
+
+/* footer  */
+
+
+.footer{
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.footer .contact p span{
+    font-weight: bold;
+    color: rgb(90, 88, 88);
+}
+
+.social p{
+    font-weight: bold;
+}
+
+.social .links{
+    margin: 10px 0px;
+    
+}
+
+.social .links i{
+    padding: 0px 5px;
+}
+.app p{
+    color: rgb(119, 117, 117);
+}
+.downloadApp{
+    display: flex;
+    cursor: pointer;
+}
+
+.downloadApp .apple{
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+    border: 1.8px solid  rgb(15, 160, 148);
+    border-radius: 6px;
+    padding: 8px 10px;
+}
+.downloadApp .apple i{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.downloadApp .apple p{
+    font-size: 13px;
+    line-height: 13px;
+}
+.downloadApp .apple p span{
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
+.downloadApp .google-play{
+    margin-left: 10px;
+}
+.app .payText{
+    margin: 10px 0px;
+}
+.app .cards i{
+    font-size: 2rem;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+.downloadApp .apple:hover{
+    background-color:  rgb(15, 160, 148);
+    color: white;
+}
+.downloadApp .apple:hover p{
+    color: white;
+}
+.downloadApp .apple:hover span{
+        color: white;
+}
+
+.footer2{
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 1.5rem;
+    color: rgb(105, 105, 105);
+}
+
+/* media queries  */
+
+@media (max-width : 799px) {
+     .nav-items .bars{
+         display: block;
+     }
+    .nav-items{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: fixed;
+      top: 0;
+      right: -300px;
+      height: 100vh;
+      width: 300px;
+      padding: 20px;
+      background-color:azure;
+      box-shadow: -2px -4px 10px rgba(0,0,0,0.6);
+      transition: right 0.3s ease-in-out;
+     }
+     .nav-items i{
+         display: none;
+     }
+     .nav-items.active{
+         right: 0px;
+         /* z-index: 6000; */
+     }
+     .nav-items li{
+         margin-top: 30px;
+     }
+  
+    .mobile{
+        display: flex;
+        align-items : center;
+    }
+    .nav-items a i{
+        display: block;
+    }
+    .nav-items .close{
+         position: absolute;
+         top: 20px;
+         left: 30px;
+         font-size: 2rem;
+        color: black;
+     }
+#hero {
+    padding: 20px 100px;
+     height: 70vh;
+    background-position: top 30% right -50%;
+    background-size: 500px;
+}
+ .features{
+     padding: 40px 40px;
+    justify-content: center;
+ }
+  .feature{
+    margin: 15px 15px;
+     
+ }
+ .items{
+    justify-content: center;    
+}
+#banner {
+    margin: 20px 0px;
+    background: url(./images/banner.jpg);
+    background-size: cover;
+    height: 20vh;
+  
+}
+
+#banner p{
+    font-size: 1.2rem;
+}
+
+#banner h1{
+    font-size: 2rem;
+}
+.sm-banner .banner-box {
+    min-width: 100%;
+    height: 50vh;
+    margin-bottom: 20px;
+}
+.banner3 {
+
+    padding: 50px 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* text-align: center; */
+}
+.banner3 .banner-box{
+    margin-bottom: 20px;
+}
+.app{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+}
+
+@media (max-width: 477px) {
+.header {
+  width: 100%;
+  height: 10vh;
+}
+.header img{
+    width: 80px;
+}
+#hero {
+    padding: 20px 20px;
+    height: 70vh;
+    background-position: top 30% right 80%;
+    background-size: 500px;
+}
+#banner p{
+  font-size: 1rem;
+}
+#banner h1{
+    font-size: 1.5rem;
+}
+#banner button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #333;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.sm-banner {
+    margin-top: 50px;
+    padding: 50px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.newsletter {
+    padding: 10px 10px;
+    background: url(./images/nb.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+    color: white;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.downloadApp {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    
+}
+.downloadApp .google-play {
+    
+    margin-top: 10px;
+}
+.app{
+    margin-left: 0px;
+}
+}
